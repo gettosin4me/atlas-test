@@ -8,7 +8,7 @@
 >
 >`port 3000`
 
-### create data
+### Create data
 * `POST` http://127.0.0.1:3000/create
 ```
 {
@@ -20,10 +20,10 @@
 }
 ```
 
-### fetch data
+### Fetch data
 * `GET` http://127.0.0.1:3000/read/:id 
 
-### update data
+### Update data
 * `PUT` http://127.0.0.1:3000/update/:id 
 ```
 {
@@ -34,5 +34,5 @@
 	"age": "23"
 }
 ```
-### delete data
+### Delete data
 * `DELETE` http://127.0.0.1:3000/delete/:id 
