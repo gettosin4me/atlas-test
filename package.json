@@ -4,7 +4,7 @@
   "description": "Atlas Test",
   "main": "index.js",
   "scripts": {
-    "serve:dev": "nodemon -w src/app -w src/bootstrap -w src/routes -w src/config src/bootstrap/index.js",
+    "serve:dev": "nodemon -w src/app -w src/bootstrap -w src/config src/bootstrap/index.js",
     "build": "babel src -s -D -d dist --presets env,stage-0",
     "prestart": "npm run -s build",
     "start": "NODE_ENV=production pm2 start dist/bootstrap/index.js",

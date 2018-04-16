@@ -4,7 +4,7 @@ const http = require('http')
 const express = require('express')
 const bodyParser = require('body-parser')
 const bin = require('./bin')
-const appRoutes = require('./../routes')
+const routes = require('./../routes')
 const config = require('./../config')
 const errorHandler = require('./../app/middleware/errorHandler')
 const providers = require('./../providers')
@@ -19,7 +19,7 @@ app.use(bodyParser.json({
 providers.database.boot(app);
 
 //express make use of routes
-appRoutes(app)
+providers.routes.boot(app, routes)
 
 //catch error on output
 app.use(errorHandler)

@@ -1,7 +1,13 @@
 "use strict";
 
-const api = require("./api")
+const express = require('express')
+const ctrl = require('./../app/controllers/app')
 
-module.exports = function (app) {
-    app.use(api())
-}
+module.exports = function () {
+    let router = express.Router()
+  
+    // App routes
+    require("./app")(router, ctrl)
+  
+    return router
+  }

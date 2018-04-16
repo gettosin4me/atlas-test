@@ -4,7 +4,7 @@ const model = require('./../models')
 
 module.exports = {
     index(req, res) {
-        res.status(200).json({message: "Output from Controller"});
+        res.status(200).json({message: "Index Loaded"});
     },
 
     post (req, res) {
@@ -21,6 +21,7 @@ module.exports = {
 
     update (req, res) {
         model.user.update(req.params.id, req.body)
+        
         res.status(200).json({message: "updated Successfully"});
     },
 
